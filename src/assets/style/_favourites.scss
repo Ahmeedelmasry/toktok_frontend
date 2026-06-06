@@ -1,0 +1,36 @@
+.favourites_page {
+  .product {
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+    overflow: visible;
+    .v-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 0px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    img {
+      border-radius: 20px;
+    }
+  }
+  .v-row.border_parent {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 50%;
+      top: 1.5%;
+      width: 2px;
+      height: 97%;
+      background-color: #403937;
+    }
+    @media (max-width: 1280px) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.product_details {
+  .carousel__slide {
+    padding: 10px !important;
+  }
+  .hero {
+    .carousel__slide {
+      img {
+        width: 90dvw !important;
+        border-radius: 30px !important;
+        height: 300px;
+      }
+    }
+  }
+  @media (min-width: 767px) {
+    .hero {
+      .carousel__slide {
+        img {
+          width: 530px !important;
+          height: 350px;
+          border-radius: 30px !important;
+        }
+      }
+      .v-card {
+        overflow: visible;
+        background-color: transparent;
+      }
+
+      .carousel__slide--sliding {
+        transition: 0.5s;
+      }
+
+      .carousel__slide {
+        opacity: 1;
+        transform: scale(0.5);
+        padding: 60px 0 !important;
+      }
+
+      .carousel__slide--active ~ .carousel__slide {
+        transform: scale(1.1);
+      }
+
+      .carousel__slide--prev {
+        opacity: 1;
+        transform: rotateY(-10deg) scale(1.1);
+      }
+
+      .carousel__slide--next {
+        opacity: 1;
+        transform: rotateY(10deg) scale(1.1);
+      }
+
+      .carousel__slide--active {
+        opacity: 1;
+        transform: rotateY(0) scale(1.5);
+        z-index: 1000000;
+      }
+      .carousel__pagination-button {
+        &::after {
+          background-color: #51515173;
+          transition: 0.2s;
+          height: 9px !important;
+        }
+        &.carousel__pagination-button--active {
+          &::after {
+            background-color: #6e9278;
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
+  .separator {
+    position: relative;
+    img {
+      position: absolute;
+      right: 100px;
+      top: 10%;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 767px) {
+      img {
+        width: 60px !important;
+        right: 20px;
+      }
+    }
+  }
+  .price {
+    border-top: 1px dashed #aaaaaa;
+    border-bottom: 1px dashed #aaaaaa;
+    .discount {
+      width: 57px;
+      border-radius: 15px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .table_parent {
+    border: 1px solid black;
+    border-radius: 5px;
+    * {
+      text-transform: uppercase !important;
+    }
+    .v-divider {
+      background-color: black;
+      opacity: 1;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import ApiHelper from '@/helpers/api.helpers.js'
 
 class UsersService extends ApiHelper {
   constructor() {
-    super('/clients')
+    super('/dashboard/clients')
   }
 
   async get(params) {

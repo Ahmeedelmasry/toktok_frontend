@@ -36,7 +36,7 @@ export const useMainStore = defineStore('main', {
     async doDeleteItem() {
       let result
       await axios
-        .delete(`${this.apiUrl}/${this.toDel.url}/${this.toDel.item._id}`, {
+        .delete(`${this.apiUrl}/dashboard/${this.toDel.url}/${this.toDel.item._id}`, {
           headers: {
             Authorization: `${$cookie.get('logger')}`
           }

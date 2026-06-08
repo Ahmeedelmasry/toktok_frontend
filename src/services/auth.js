@@ -2,7 +2,7 @@ import ApiHelper from '@/helpers/api.helpers.js'
 
 class AuthService extends ApiHelper {
   constructor() {
-    super('')
+    super('/dashboard')
   }
 
   async login(body) {
